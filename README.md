@@ -97,6 +97,8 @@ how you can further improve your ABAP Cloud skills
 
 ## Download and Installation
 
+See section [Requirements](#requirements) where installation details are described that have to be performed by a system administrator.  
+
 ## Known Issues
 <!-- You may simply state "No known issues. -->
 
