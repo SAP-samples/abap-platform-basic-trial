@@ -30,7 +30,12 @@ A detailed description of the steps that have to be performed can be found [here
 
 # Exercises
 
-By following the exercices described below you will build a shopping cart app as a side-by-side extension to your SAP S/4HANA system.
+By following the exercices described below you will build a shopping cart app as a side-by-side extension to your SAP S/4HANA system.  
+
+> **Please note**
+> As a result of this exercises only Sales Orders will be created.
+> In addition there is only read-access to product data.
+> It is hence safe to run this exercises in a test / demo system.
 
 ## Unit 1 S/4 HANA Extensibility Model and ABAP Cloud
 
