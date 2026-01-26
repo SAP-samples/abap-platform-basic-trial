@@ -46,7 +46,7 @@ First you will create an ABAP package, a database table, and an ABAP class to fi
       <!-- ![table](./Images/ex01/p2c.png)-->
       ![](./Images/01_020_create_table.png)
 
-   4. Select a transport request, and click **Finish** to create the database table.
+   4. You don't have to select a transport request. Just click **Finish** to create the database table.
 
    5. Replace the default code with the code snippet provided below.
 
