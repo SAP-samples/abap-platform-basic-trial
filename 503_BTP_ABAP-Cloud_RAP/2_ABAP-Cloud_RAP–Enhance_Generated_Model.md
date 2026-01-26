@@ -27,20 +27,9 @@ These enhancements are necessary since not all settings can be foreseen by the R
 
    Replace the following code snippet right before the **`define root view`** statement as shown on the screenshot below and format the source code (**Shift+F1**).
 
-   New code   
-
-    ```ABAP
+   ```ABAP
    @EndUserText.label: 'Shopping Cart'
    ```
-
-   Old code   
-
-   ```ABAP
-   @Endusertext: {
-   Label: '###GENERATED Core Data Service Entity'
-   }  
-   ```
-
    Your source code should look like this:
 
    ![Annotation_EndUserTextLabel](./Images/02_000_change_enduser_text_r_view.png)
