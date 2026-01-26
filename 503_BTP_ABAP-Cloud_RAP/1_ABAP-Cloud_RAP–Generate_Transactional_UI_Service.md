@@ -13,7 +13,10 @@ First you will create an ABAP package, a database table, and an ABAP class to fi
       - Name: **`ZAC000000U##`**  
       - Description: **Package group U##**
       - Superpackage: **`ZLOCAL`**
-      - Tick the checkbox **Add to favorite packages** 
+      - Tick the checkbox **Add to favorite packages**
+   3. In the **Select package properties.** dialogue just press **> Next**
+   4. In the **Select Transport Request** dialogue just press **> Finsh**  
+      (there is no recording of transport requests for packages in the software component **`ZLOCAL`**).  
 
 ## Exercise 1.1: Create database table
 
