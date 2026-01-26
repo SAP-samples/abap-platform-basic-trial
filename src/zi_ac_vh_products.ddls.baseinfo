@@ -2,9 +2,7 @@
 "BASEINFO":
 {
 "FROM":
-[
-"ZR_AC000000UXX"
-],
+[],
 "ASSOCIATED":
 [],
 "BASE":

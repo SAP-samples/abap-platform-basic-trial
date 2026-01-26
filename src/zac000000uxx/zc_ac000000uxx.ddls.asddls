@@ -1,60 +1,41 @@
 @Metadata.allowExtensions: true
-@Metadata.ignorePropagatedAnnotations: true
-@Endusertext: {
-  Label: '###GENERATED Core Data Service Entity'
-}
-@Objectmodel: {
-  Sapobjectnodetype.Name: 'ZAC000000UXX'
-}
-@AccessControl.authorizationCheck: #MANDATORY
+@EndUserText.label: 'Online Shop'
+@AccessControl.authorizationCheck: #NOT_REQUIRED
+@Search.searchable: true
+@ObjectModel.semanticKey: [ 'OrderId' ]
 define root view entity ZC_AC000000UXX
-  provider contract TRANSACTIONAL_QUERY
-  as projection on ZR_AC000000UXX
-  association [1..1] to ZR_AC000000UXX as _BaseEntity on $projection.ORDERUUID = _BaseEntity.ORDERUUID
+provider contract transactional_query
+as projection on ZR_AC000000UXX
 {
   key OrderUUID,
+  @Search.defaultSearchElement: true
+  @Search.fuzzinessThreshold: 0.90
   OrderID,
+  @Search.defaultSearchElement: true
+  @Search.fuzzinessThreshold: 0.90
+  @Consumption.valueHelpDefinition: [ {
+  entity.name: 'ZI_AC_VH_PRODUCTS',
+  entity.element: 'Product',
+  useForValidation: true
+  } ]
   OrderedItem,
   OrderQuantity,
   RequestedDeliveryDate,
-  @Semantics: {
-    Amount.Currencycode: 'Currency'
-  }
   TotalPrice,
-  @Consumption: {
-    Valuehelpdefinition: [ {
-      Entity.Element: 'Currency', 
-      Entity.Name: 'I_CurrencyStdVH', 
-      Useforvalidation: true
-    } ]
-  }
+  @Semantics.currencyCode: true
   Currency,
   OverallStatus,
   SalesOrderStatus,
+  @Search.defaultSearchElement: true
+  @Search.fuzzinessThreshold: 0.90
   Salesorder,
   BgpfStatus,
   BgpgProcessName,
   ManageSalesOrderUrl,
   Notes,
-  @Semantics: {
-    User.Createdby: true
-  }
   CreatedBy,
-  @Semantics: {
-    Systemdatetime.Createdat: true
-  }
   CreatedAt,
-  @Semantics: {
-    User.Lastchangedby: true
-  }
   LastChangedBy,
-  @Semantics: {
-    Systemdatetime.Lastchangedat: true
-  }
   LastChangedAt,
-  @Semantics: {
-    Systemdatetime.Localinstancelastchangedat: true
+  LocalLastChangedAt
   }
-  LocalLastChangedAt,
-  _BaseEntity
-}

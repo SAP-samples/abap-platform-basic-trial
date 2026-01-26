@@ -1,265 +1,152 @@
 @Metadata.layer: #CORE
 @UI.headerInfo.title.type: #STANDARD
-@UI.headerInfo.title.value: 'OrderUUID'
+@UI.headerInfo.title.value: 'OrderId'
 @UI.headerInfo.description.type: #STANDARD
-@UI.headerInfo.description.value: 'OrderUUID'
+@UI.headerInfo.description.value: 'OrderedItem'
+@UI.headerInfo.description.url: 'ManageSalesOrderUrl'
 annotate view ZC_AC000000UXX with
-{
-  @EndUserText.label: 'OrderUUID'
+  { 
+
+  @EndUserText.label: 'OrderId'
+
   @UI.facet: [ {
-    label: 'General Information', 
-    id: 'GeneralInfo', 
-    purpose: #STANDARD, 
-    position: 10 , 
-    type: #IDENTIFICATION_REFERENCE
+  label: 'General Information',
+  id: 'GeneralInfo',
+  purpose: #STANDARD,
+  position: 10 ,
+  type: #IDENTIFICATION_REFERENCE
   } ]
+
   @UI.identification: [ {
-    position: 10 , 
-    label: 'OrderUUID'
-  } ]
+  position: 20 ,
+  label: 'OrderId'
+  }
+  ]
   @UI.lineItem: [ {
-    position: 10 , 
-    label: 'OrderUUID'
-  } ]
+  position: 20 ,
+  label: 'OrderId'
+  }      
+  ]
   @UI.selectionField: [ {
-    position: 10 
-  } ]
-  OrderUUID;
-  
-  @EndUserText.label: 'OrderID'
-  @UI.identification: [ {
-    position: 20 , 
-    label: 'OrderID'
-  } ]
-  @UI.lineItem: [ {
-    position: 20 , 
-    label: 'OrderID'
-  } ]
-  @UI.selectionField: [ {
-    position: 20 
+  position: 20
   } ]
   OrderID;
-  
+
   @EndUserText.label: 'OrderedItem'
   @UI.identification: [ {
-    position: 30 , 
+    position: 30 ,
     label: 'OrderedItem'
   } ]
   @UI.lineItem: [ {
-    position: 30 , 
+    position: 30 ,
     label: 'OrderedItem'
   } ]
   @UI.selectionField: [ {
-    position: 30 
+    position: 30
   } ]
   OrderedItem;
-  
+
   @EndUserText.label: 'OrderQuantity'
   @UI.identification: [ {
-    position: 40 , 
+    position: 40 ,
     label: 'OrderQuantity'
   } ]
   @UI.lineItem: [ {
-    position: 40 , 
+    position: 40 ,
     label: 'OrderQuantity'
-  } ]
-  @UI.selectionField: [ {
-    position: 40 
   } ]
   OrderQuantity;
-  
+
   @EndUserText.label: 'RequestedDeliveryDate'
   @UI.identification: [ {
-    position: 50 , 
+    position: 50 ,
     label: 'RequestedDeliveryDate'
   } ]
   @UI.lineItem: [ {
-    position: 50 , 
+    position: 50 ,
     label: 'RequestedDeliveryDate'
   } ]
   @UI.selectionField: [ {
-    position: 50 
+    position: 50
   } ]
   RequestedDeliveryDate;
-  
+
   @EndUserText.label: 'TotalPrice'
   @UI.identification: [ {
-    position: 60 , 
+    position: 60 ,
     label: 'TotalPrice'
   } ]
   @UI.lineItem: [ {
-    position: 60 , 
+    position: 60 ,
     label: 'TotalPrice'
-  } ]
-  @UI.selectionField: [ {
-    position: 60 
   } ]
   TotalPrice;
-  
-  @EndUserText.label: 'OverallStatus'
+
+  @EndUserText.label: 'Salesorder Status'
   @UI.identification: [ {
-    position: 70 , 
-    label: 'OverallStatus'
+    position: 75 ,
+    label: 'Salesorder Status'
   } ]
   @UI.lineItem: [ {
-    position: 70 , 
-    label: 'OverallStatus'
+    position: 75 ,
+    label: 'Salesorder Status'
   } ]
   @UI.selectionField: [ {
-    position: 70 
-  } ]
-  OverallStatus;
-  
-  @EndUserText.label: 'SalesOrderStatus'
-  @UI.identification: [ {
-    position: 80 , 
-    label: 'SalesOrderStatus'
-  } ]
-  @UI.lineItem: [ {
-    position: 80 , 
-    label: 'SalesOrderStatus'
-  } ]
-  @UI.selectionField: [ {
-    position: 80 
+    position: 75
   } ]
   SalesOrderStatus;
-  
+
+  @EndUserText.label: 'OverallStatus'
+  @UI.identification: [ {
+    position: 70 ,
+    label: 'OverallStatus'
+  } ]
+  @UI.lineItem: [ {
+    position: 70 ,
+    label: 'OverallStatus'
+  } ]
+  @UI.selectionField: [ {
+    position: 70
+  } ]
+  OverallStatus;
+
   @EndUserText.label: 'Salesorder'
   @UI.identification: [ {
-    position: 90 , 
+    position: 80 ,
     label: 'Salesorder'
   } ]
   @UI.lineItem: [ {
-    position: 90 , 
+    position: 80 ,
     label: 'Salesorder'
   } ]
   @UI.selectionField: [ {
-    position: 90 
+    position: 80
   } ]
   Salesorder;
-  
-  @EndUserText.label: 'BgpfStatus'
-  @UI.identification: [ {
-    position: 100 , 
-    label: 'BgpfStatus'
-  } ]
-  @UI.lineItem: [ {
-    position: 100 , 
-    label: 'BgpfStatus'
-  } ]
-  @UI.selectionField: [ {
-    position: 100 
-  } ]
-  BgpfStatus;
-  
-  @EndUserText.label: 'BgpgProcessName'
-  @UI.identification: [ {
-    position: 110 , 
-    label: 'BgpgProcessName'
-  } ]
-  @UI.lineItem: [ {
-    position: 110 , 
-    label: 'BgpgProcessName'
-  } ]
-  @UI.selectionField: [ {
-    position: 110 
-  } ]
-  BgpgProcessName;
-  
-  @EndUserText.label: 'ManageSalesOrderUrl'
-  @UI.identification: [ {
-    position: 120 , 
-    label: 'ManageSalesOrderUrl'
-  } ]
-  @UI.lineItem: [ {
-    position: 120 , 
-    label: 'ManageSalesOrderUrl'
-  } ]
-  @UI.selectionField: [ {
-    position: 120 
-  } ]
-  ManageSalesOrderUrl;
-  
+
   @EndUserText.label: 'Notes'
   @UI.identification: [ {
-    position: 130 , 
+    position: 90 ,
     label: 'Notes'
   } ]
   @UI.lineItem: [ {
-    position: 130 , 
+    position: 90 ,
     label: 'Notes'
-  } ]
-  @UI.selectionField: [ {
-    position: 130 
   } ]
   Notes;
-  
+
   @UI.identification: [ {
-    position: 140 
+    position: 100 ,
+    label: 'Manage Sales Order',
+    type: #WITH_URL,
+    url: 'ManageSalesOrderUrl'    
   } ]
   @UI.lineItem: [ {
-    position: 140 
+    position: 100 ,
+    label: 'Manage Sales Order',
+    type: #WITH_URL,
+    url: 'ManageSalesOrderUrl'
   } ]
-  @UI.selectionField: [ {
-    position: 140 
-  } ]
-  CreatedBy;
-  
-  @UI.identification: [ {
-    position: 150 
-  } ]
-  @UI.lineItem: [ {
-    position: 150 
-  } ]
-  @UI.selectionField: [ {
-    position: 150 
-  } ]
-  CreatedAt;
-  
-  @UI.identification: [ {
-    position: 160 
-  } ]
-  @UI.lineItem: [ {
-    position: 160 
-  } ]
-  @UI.selectionField: [ {
-    position: 160 
-  } ]
-  LastChangedBy;
-  
-  @UI.identification: [ {
-    position: 170 
-  } ]
-  @UI.lineItem: [ {
-    position: 170 
-  } ]
-  @UI.selectionField: [ {
-    position: 170 
-  } ]
-  LastChangedAt;
-  
-  @UI.identification: [ {
-    position: 180 
-  } ]
-  @UI.lineItem: [ {
-    position: 180 
-  } ]
-  @UI.selectionField: [ {
-    position: 180 
-  } ]
-  LocalLastChangedAt;
-  
-  @EndUserText.label: '_BaseEntity'
-  @UI.identification: [ {
-    position: 190 , 
-    label: '_BaseEntity'
-  } ]
-  @UI.lineItem: [ {
-    position: 190 , 
-    label: '_BaseEntity'
-  } ]
-  @UI.selectionField: [ {
-    position: 190 
-  } ]
-  _BaseEntity;
-}
+  ManageSalesOrderUrl;
+
+  }

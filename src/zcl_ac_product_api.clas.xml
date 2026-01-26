@@ -3,9 +3,9 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZCL_TEST_API_SALES_ORDER_SRV</CLSNAME>
+    <CLSNAME>ZCL_AC_PRODUCT_API</CLSNAME>
     <LANGU>E</LANGU>
-    <DESCRIPT>Test API_SALES_ORDER_SRV</DESCRIPT>
+    <DESCRIPT>zcl_ac_product_api</DESCRIPT>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>

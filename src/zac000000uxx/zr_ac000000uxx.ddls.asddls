@@ -1,9 +1,9 @@
 @AccessControl.authorizationCheck: #MANDATORY
 @Metadata.allowExtensions: true
 @ObjectModel.sapObjectNodeType.name: 'ZAC000000UXX'
-@EndUserText.label: '###GENERATED Core Data Service Entity'
+@EndUserText.label: 'Shopping Cart'
 define root view entity ZR_AC000000UXX
-  as select from ZAC000000UXX as ShoppingCart
+  as select from zac000000uxx as ShoppingCart
 {
   key order_uuid as OrderUUID,
   order_id as OrderID,
