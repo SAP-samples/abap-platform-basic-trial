@@ -167,7 +167,7 @@ and perform the steps described below
 
 1. [Download $metadata from API Hub](../505_BTP_ABAP-Cloud_OData-Service-Consumption/1_ABAP-Cloud_OData.md)   
 2. [Create service consumption model for product service](../505_BTP_ABAP-Cloud_OData-Service-Consumption/2_ABAP-Cloud_OData.md)   
-3. [Create service consumption model for sales order (a2x) service](../505_BTP_ABAP-Cloud_OData-Service-Consumption/3_ABAP-Cloud_OData.md)   
+3. [Create service consumption model for sales order (a2x) service](../505_BTP_ABAP-Cloud_OData-Service-Consumption/4_ABAP-Cloud_OData.md)   
 
 
 ### Create two communication arrangements
