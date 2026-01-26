@@ -7,8 +7,13 @@ In this exercise, you will create a transactional UI service along with the unde
 First you will create an ABAP package, a database table, and an ABAP class to fill the database table with demo data. Then you will use an ADT wizard to generate all the needed development RAP artefacts of your UI service on top of the database table. This includes the CDS data model, behavior definition, service definition, and service binding. Afterwards you will publish and check your _ShoppingCart_ application with the SAP Fiori elements preview.    
 
 ## Exercise 1.0: Create a package
-
-⚠️ --> describe how to create a package since this has to be done manually since we do not use SAP Build for that
+   
+   1. Right click on the folder **Favorite Packages** and select **> New** --> **ABAP Package** from the context menue
+   2. Enter the following data in the **New ABAP Package** dialogue
+      - Name: **`ZAC000000U##`**  
+      - Description: **Package group U##**
+      - Superpackage: **`ZLOCAL`**
+      - Tick the checkbox **Add to favorite packages** 
 
 ## Exercise 1.1: Create database table
 
