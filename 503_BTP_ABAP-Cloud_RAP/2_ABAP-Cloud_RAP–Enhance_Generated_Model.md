@@ -27,8 +27,18 @@ These enhancements are necessary since not all settings can be foreseen by the R
 
    Replace the following code snippet right before the **`define root view`** statement as shown on the screenshot below and format the source code (**Shift+F1**).
 
-   ```ABAP
+   New code   
+
+    ```ABAP
    @EndUserText.label: 'Shopping Cart'
+   ```
+
+   Old code   
+
+   ```ABAP
+   @Endusertext: {
+   Label: '###GENERATED Core Data Service Entity'
+   }  
    ```
 
    Your source code should look like this:
@@ -39,7 +49,7 @@ These enhancements are necessary since not all settings can be foreseen by the R
    > You can ignore the warning:   
    > `CDS entity ZR_AC000000U## with "@ACCESSCONTROL.AUTHORIZATIONCHECK: #CHECK" has no access control (runtime behavior: full access) [Access Control Management]`
 
-2. Save ![inline](./Images/ADT_save.png) (**Ctrl+S**) and activate ![inline](./Images/ADT_activate.png) (**Ctrl+F3**) the changes.
+3. Save ![inline](./Images/ADT_save.png) (**Ctrl+S**) and activate ![inline](./Images/ADT_activate.png) (**Ctrl+F3**) the changes.
 
 ## Exercise 2.2: Enhance the Projected BO Data Model 
 
