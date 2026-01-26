@@ -3,15 +3,13 @@
  <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
   <asx:values>
    <VSEOCLASS>
-    <CLSNAME>ZBP_C_AC000000UXX</CLSNAME>
+    <CLSNAME>ZCL_AC_SALESORDER_API</CLSNAME>
     <LANGU>E</LANGU>
-    <DESCRIPT>Behavior Implementation for ZC_AC000000UXX</DESCRIPT>
-    <CATEGORY>06</CATEGORY>
+    <DESCRIPT>Test API_SALES_ORDER_SRV</DESCRIPT>
     <STATE>1</STATE>
     <CLSCCINCL>X</CLSCCINCL>
     <FIXPT>X</FIXPT>
     <UNICODE>X</UNICODE>
-    <CLSDEFINT>ZC_AC000000UXX</CLSDEFINT>
    </VSEOCLASS>
   </asx:values>
  </asx:abap>

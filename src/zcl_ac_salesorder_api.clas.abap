@@ -1,4 +1,4 @@
-CLASS zcl_test_api_sales_order_srv DEFINITION
+CLASS zcl_ac_salesorder_api DEFINITION
   PUBLIC
   FINAL
   CREATE PUBLIC .
@@ -49,7 +49,7 @@ ENDCLASS.
 
 
 
-CLASS ZCL_TEST_API_SALES_ORDER_SRV IMPLEMENTATION.
+CLASS ZCL_AC_SALESORDER_API IMPLEMENTATION.
 
 
   METHOD constructor.
@@ -64,10 +64,6 @@ CLASS ZCL_TEST_API_SALES_ORDER_SRV IMPLEMENTATION.
                          distribution_channel        = '10'
                          organization_division       = '00'
                          sold_to_party               = 'USCU_L04'      "'10100001'
-
-                         price_detn_exchange_rate = '12.8'
-
-
                          purchase_order_by_customer  = i_purchase_order_by_customer
                          requested_delivery_date     = i_requested_delivery_date
                          to_item = VALUE #( (
@@ -160,9 +156,6 @@ CLASS ZCL_TEST_API_SALES_ORDER_SRV IMPLEMENTATION.
                                                              ( |{ to_upper( 'organization_division' ) }| )
                                                              ( |{ to_upper( 'sold_to_party' ) }| )
                                                              ( |{ to_upper( 'purchase_order_by_customer' ) }| )
-
-*                                                             ( |{ to_upper( 'price_detn_exchange_rate' ) }| )
-
                                                                   ) ).
 
             lo_data_desc_node_child = lo_data_desc_node_root->add_child( 'TO_ITEM' ).
@@ -239,8 +232,6 @@ CLASS ZCL_TEST_API_SALES_ORDER_SRV IMPLEMENTATION.
                        distribution_channel        = '10'
                        organization_division       = '00'
                        sold_to_party               = '10100001'
-
-*                       price_detn_exchange_rate = '12.8'
                        purchase_order_by_customer  = |SalesOrder Simulation{ sy-uname }|
                        requested_delivery_date     = sy-datum
                        to_item = VALUE #( (

@@ -1,4 +1,4 @@
-projection implementation in class ZBP_C_AC000000UXX unique;
+projection; //implementation in class ZBP_C_AC000000UXX unique;
 strict ( 2 );
 extensible;
 use draft;
@@ -11,10 +11,25 @@ use etag
   use update;
   use delete;
 
+  // enable external use of event
+  use event statusUpdated;
+
   use action Edit;
   use action Activate;
   use action Discard;
   use action Resume;
   use action Prepare;
+
+  // should be updatable via EML calls
+  // that are not using "in local mode"
+  field ( readonly )
+  OverallStatus,
+  SalesOrderStatus,
+  Salesorder,
+  TotalPrice,
+  BgpfStatus,
+  BgpgProcessName,
+  ManageSalesOrderUrl,
+  Notes;
 
 }

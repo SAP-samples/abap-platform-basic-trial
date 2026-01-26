@@ -1,15 +1,5 @@
-class ZBP_C_AC000000UXX definition
-  public
-  abstract
-  final
-  for behavior of ZC_AC000000UXX .
-
-public section.
-protected section.
-private section.
+CLASS zbp_c_ac000000uxx DEFINITION PUBLIC ABSTRACT FINAL FOR BEHAVIOR OF zc_ac000000uxx.
 ENDCLASS.
 
-
-
-CLASS ZBP_C_AC000000UXX IMPLEMENTATION.
+CLASS zbp_c_ac000000uxx IMPLEMENTATION.
 ENDCLASS.

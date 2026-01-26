@@ -36,13 +36,13 @@ CLASS ZCL_AC_PRODUCT_API IMPLEMENTATION.
 
   METHOD get_products.
 
-    et_business_data = VALUE #(
-    ( Product = 'TG11'  )
-    ( Product = 'TG12'  )
-    ( Product = 'TG13'  )
-    ( Product = 'TG15_not_exists' )
-     ).
-    exit.
+*    et_business_data = VALUE #(
+*    ( Product = 'TG11'  )
+*    ( Product = 'TG12'  )
+*    ( Product = 'TG13'  )
+*    ( Product = 'TG15_not_exists' )
+*     ).
+*    exit.
 
     DATA lt_business_data TYPE TABLE OF zsc_test_api_clfn_product_srv=>tys_a_clfn_product_type.
 
