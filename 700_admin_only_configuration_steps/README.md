@@ -152,6 +152,14 @@ Use the abapGit plug-in to import the ABAP Artefacts of this repository by execu
 8. Right-click on the new ABAP repository and choose pull to start the cloning of the repository contents. Note that this procedure may take a few seconds.
 9. After the import has been finished choose mass activation e.g. by pressing `Ctrl+Shift+F3`. 
 
+### Assign business catalog `ZAC_FIORI_APP_ASSIGNMENT` to a role for all developers
+
+Via the import of the GitHub repository the business catalog **`ZAC_FIORI_APP_ASSIGNMENT`** has been imported into your system.  
+
+This business catalog has to be assigned to a role that all developers that should work through this script are being assigned to.
+
+Please not that the generated role **`SAP_BR_DEVELOPER`** cannot be updated. You must thus create a custom role (which is the recommended approach anyway ;-) )
+
 ### Create two service consumption models
 
 Since service consumption models cannot yet be imported using abapGit you have to create them manually.
