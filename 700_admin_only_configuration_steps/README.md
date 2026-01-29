@@ -248,7 +248,17 @@ In ADT run the following two classes via F9.
 
   ![](./Images/700_test_so_creation.png)
 
-### AI enablement on SAP BTP (if you want to use AI in ABAP)
+### Add a destination from SAP Business Application Studio (BAS) to SAP BTP ABAP Environment
+
+As part of the setup of the SAP BTP ABAP Environment using the booster also SAP Business Application Studio (BAS) instance has been created in the respective SAP BTP sub account.
+
+It is required to create a destination called `Build_ABAP` that points from to the ABAP Environment so that it can be used to deploy SAP Fiori Applications to the SAP BTP ABAP Environment from BAS.
+
+<details>   
+<summary>Click to expand (details to be added)</summary>
+</details>  
+
+### AI enableme nt on SAP BTP (if you want to use AI in ABAP)
 
 We're using AI capabilities as part of the learning. In order to use Joule for Developers you need to request the relevant entitlement for your BTP Global Account.  
 Please follow the below community post on how to do this.
