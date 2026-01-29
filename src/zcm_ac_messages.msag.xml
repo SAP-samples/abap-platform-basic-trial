@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<abapGit version="v1.0.0" serializer="LCL_OBJECT_MSAG" serializer_version="v1.0.0">
+ <asx:abap xmlns:asx="http://www.sap.com/abapxml" version="1.0">
+  <asx:values>
+   <T100A>
+    <ARBGB>ZCM_AC_MESSAGES</ARBGB>
+    <MASTERLANG>E</MASTERLANG>
+    <STEXT>Messages for basic trial</STEXT>
+   </T100A>
+   <T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZCM_AC_MESSAGES</ARBGB>
+     <MSGNR>001</MSGNR>
+     <TEXT>&amp;1 not valid</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZCM_AC_MESSAGES</ARBGB>
+     <MSGNR>002</MSGNR>
+     <TEXT>Enter requested delivery date</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZCM_AC_MESSAGES</ARBGB>
+     <MSGNR>003</MSGNR>
+     <TEXT>Enter order quantity</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZCM_AC_MESSAGES</ARBGB>
+     <MSGNR>004</MSGNR>
+     <TEXT>Enter ordered item</TEXT>
+    </T100>
+    <T100>
+     <SPRSL>E</SPRSL>
+     <ARBGB>ZCM_AC_MESSAGES</ARBGB>
+     <MSGNR>005</MSGNR>
+     <TEXT>Requested delivery date is in the past</TEXT>
+    </T100>
+   </T100>
+  </asx:values>
+ </asx:abap>
+</abapGit>

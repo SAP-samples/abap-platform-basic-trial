@@ -22,6 +22,12 @@ authorization master ( global )
   field ( readonly )
   OrderId;
 
+  // mark mandatory fields
+  field ( mandatory )
+  OrderQuantity,
+  OrderedItem,
+  RequestedDeliveryDate;
+
   field ( numbering : managed )
   OrderUUID;
 
@@ -47,7 +53,17 @@ authorization master ( global )
   draft action Discard;
   draft action Edit;
   draft action Resume;
-  draft determine action Prepare;
+  //  draft determine action Prepare;
+  draft determine action Prepare
+  {
+    validation validateOrderedItem;
+    validation validateRequestedDeliveryDate;
+    validation validateOrderQuantity;
+  }
+
+  validation validateOrderedItem on save { create; field OrderedItem; }
+  validation validateRequestedDeliveryDate on save { create; field RequestedDeliveryDate; }
+  validation validateOrderQuantity on save { create; field OrderQuantity; }
 
   mapping for zac000000uxx corresponding extensible
     {
