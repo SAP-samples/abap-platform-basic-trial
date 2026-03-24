@@ -78,6 +78,8 @@ If not, perform the following steps for both services in order to publish them i
 
 </details>
 
+## Configuration steps in your SAP BTP Global Account   
+
 ### Setup an ABAP Environment using the booster
 
 The setup of an ABAP Environment in your SAP BTP Global account can be conviniently be performed by using a so called booster. 
@@ -131,7 +133,7 @@ In addition more information can be found in the SAP Communities:
 
 https://community.sap.com/t5/technology-blog-posts-by-members/how-to-connect-on-premise-sap-to-btp-using-sap-cloud-connector/ba-p/13523632
 
-## Create Communication Arrangments
+### Create Communication Arrangments
 
 After setting up the technical connection, communication arrangements have to be created in your SAP BTP environment.   
 
@@ -141,24 +143,47 @@ Unfortunately the service consumption models that are needed as well have to be 
 
 ### Import sample source code from GitHub
 
+Using a developer user you have to:
+- create a package `ZTRL_BTP_TRIAL`
+- Import the content of this repository into this package
+
+<details>   
+<summary>Click to expand</summary>
 Use the abapGit plug-in to import the ABAP Artefacts of this repository by executing the following steps:
 
-1. In your ABAP cloud project, create the ABAP package **`ZTRL_BTP_TRIAL`** (using e.g. the superpackage `ZLOCAL`) as the target package for the demo content to be downloaded (leave the suggested values unchanged when following the steps in the package creation wizard).  
+1. In your ABAP cloud project, create the ABAP package `ZTRL_BTP_TRIAL` (using e.g. the superpackage `ZLOCAL`) as the target package for the demo content to be downloaded (leave the suggested values unchanged when following the steps in the package creation wizard).  
 2. To add the abapGit Repositories view to the ABAP perspective, click **Window** > **Show View** > **Other...** from the menu bar and choose abapGit Repositories.  
-4. In the abapGit Repositories view, click the **`+`** icon to clone an abapGit repository.
-5. Enter the following URL for this repository: `https://github.com/SAP-samples/abap-platform-basic-trial.git` and choose **Next**.
-6. Select the branch **`refs/heads/main`** and enter the newly created package **`ZTRL_BTP_TRIAL`** as the target package and choose **Next**.  
+4. In the abapGit Repositories view, click the `+` icon to clone an abapGit repository.
+5. Enter the following URL of this repository: `https://github.com/SAP-samples/abap-platform-rap-workshops.git` and choose **Next**.
+6. Select the branch `basic-trial` and enter the newly created package `ZTRL_BTP_TRIAL` as the target package and choose **Next**.  
 7. Choose **Finish** to link the Git repository to your ABAP cloud project. The repository appears in the abapGit Repositories View with status **Linked**.
 8. Right-click on the new ABAP repository and choose pull to start the cloning of the repository contents. Note that this procedure may take a few seconds.
 9. After the import has been finished choose mass activation e.g. by pressing `Ctrl+Shift+F3`. 
+</details>
 
-### Assign business catalog `ZAC_FIORI_APP_ASSIGNMENT` to a role for all developers
+After the import has taken place in ADT you should see that the objects that have framed in green have been imported. What is now left to do is to create manually the objects that are framed in red.
 
-Via the import of the GitHub repository the business catalog **`ZAC_FIORI_APP_ASSIGNMENT`** has been imported into your system.  
+![Imported objects and Objects to be created](Images/800_objects_to_be_imported_and_created.png)  
 
-This business catalog has to be assigned to a role that all developers that should work through this script are being assigned to.
+<details>   
+<summary>Click for details about imported http outbound services and communication scenarios</summary>
+For your convenience two http outbound services have been imported.   
 
-Please not that the generated role **`SAP_BR_DEVELOPER`** cannot be updated. You must thus create a custom role (which is the recommended approach anyway ;-) )
+![Outbound service SAP_COM_109](Images/810_outbound_service_0109.png) 
+
+and  
+
+![Outbound service SAP_COM_309](Images/820_outbound_service_0309.png)  
+
+and in addition two communication scenarios:  
+
+![Communication scenario for SAP_COM_109](Images/810_communication_scenario_0109.png) 
+
+and  
+
+![Communication scenario for SAP_COM_309](Images/820_communication_scenario_0309.png)  
+
+</details>
 
 ### Create two service consumption models
 
@@ -175,7 +200,7 @@ and perform the steps described below
 
 1. [Download $metadata from API Hub](../505_BTP_ABAP-Cloud_OData-Service-Consumption/1_ABAP-Cloud_OData.md)   
 2. [Create service consumption model for product service](../505_BTP_ABAP-Cloud_OData-Service-Consumption/2_ABAP-Cloud_OData.md)   
-3. [Create service consumption model for sales order (a2x) service](../505_BTP_ABAP-Cloud_OData-Service-Consumption/4_ABAP-Cloud_OData.md)   
+3. [Create service consumption model for sales order (a2x) service](../505_BTP_ABAP-Cloud_OData-Service-Consumption/3_ABAP-Cloud_OData.md)   
 
 
 ### Create two communication arrangements
@@ -248,17 +273,7 @@ In ADT run the following two classes via F9.
 
   ![](./Images/700_test_so_creation.png)
 
-### Add a destination from SAP Business Application Studio (BAS) to SAP BTP ABAP Environment
-
-As part of the setup of the SAP BTP ABAP Environment using the booster also SAP Business Application Studio (BAS) instance has been created in the respective SAP BTP sub account.
-
-It is required to create a destination called `Build_ABAP` that points from to the ABAP Environment so that it can be used to deploy SAP Fiori Applications to the SAP BTP ABAP Environment from BAS.
-
-<details>   
-<summary>Click to expand (details to be added)</summary>
-</details>  
-
-### AI enableme nt on SAP BTP (if you want to use AI in ABAP)
+### AI enablement on SAP BTP (if you want to use AI in ABAP)
 
 We're using AI capabilities as part of the learning. In order to use Joule for Developers you need to request the relevant entitlement for your BTP Global Account.  
 Please follow the below community post on how to do this.
